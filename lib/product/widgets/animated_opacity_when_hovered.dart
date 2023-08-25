@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+//İmleç ile üzerine gelindiğinde opacity değerinin değiştiği widget
+class AnimatedOpacityWhenHovered extends StatefulWidget {
+  final Widget child;
+
+  const AnimatedOpacityWhenHovered({
+    required this.child,
+    super.key,
+  });
+
+  @override
+  State<AnimatedOpacityWhenHovered> createState() =>
+      _AnimatedOpacityWhenHoveredState();
+}
+
+class _AnimatedOpacityWhenHoveredState
+    extends State<AnimatedOpacityWhenHovered> {
+  late bool _hovered;
+
+  @override
+  void initState() {
+    _hovered = false;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) => setState(() => _hovered = true),
+      onExit: (event) => setState(() => _hovered = false),
+      cursor: SystemMouseCursors.click,
+      child: AnimatedOpacity(
+        duration: kThemeAnimationDuration,
+        opacity: _hovered ? 1.0 : .6,
+        child: widget.child,
+      ),
+    );
+  }
+}
