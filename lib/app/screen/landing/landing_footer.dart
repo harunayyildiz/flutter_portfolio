@@ -7,9 +7,7 @@ import '../../../product/init/helpers/url_launcher.dart';
 import '../../../product/widgets/animated_opacity_when_hovered.dart';
 
 class LandingFooter extends StatelessWidget {
-  const LandingFooter({
-    Key? key,
-  }) : super(key: key);
+  const LandingFooter({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -9,12 +9,8 @@ class AnimatedImageOverlay extends StatefulWidget {
   final String? hoverX3Img;
 
   const AnimatedImageOverlay(
-    this.topic,
-    this.hoverX1Img,
-    this.hoverX2Img,
-    this.hoverX3Img, {
-    Key? key,
-  }) : super(key: key);
+      this.topic, this.hoverX1Img, this.hoverX2Img, this.hoverX3Img,
+      {super.key});
 
   @override
   State<AnimatedImageOverlay> createState() => _AnimatedImageOverlayState();

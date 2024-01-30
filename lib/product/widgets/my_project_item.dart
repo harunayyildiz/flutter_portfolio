@@ -11,10 +11,7 @@ import 'interactive_image_viewer.dart';
 class MyProjectItem extends StatelessWidget {
   final MyProjectModel app;
 
-  const MyProjectItem(
-    this.app, {
-    Key? key,
-  }) : super(key: key);
+  const MyProjectItem(this.app, {super.key});
 
   @override
   Widget build(BuildContext context) {

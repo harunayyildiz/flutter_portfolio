@@ -16,18 +16,19 @@ class DelayedWidget extends StatefulWidget {
   final DelayFrom from;
 
   const DelayedWidget({
-    Key? key,
+    super.key,
     required this.child,
     this.duration = const Duration(milliseconds: 500),
     this.delayDuration = Duration.zero,
     this.from = DelayFrom.bottom,
-  }) : super(key: key);
+  });
 
   @override
   DelayedWidgetState createState() => DelayedWidgetState();
 }
 
-class DelayedWidgetState extends State<DelayedWidget> with SingleTickerProviderStateMixin {
+class DelayedWidgetState extends State<DelayedWidget>
+    with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
   bool _animationControllerDisposed = false;
