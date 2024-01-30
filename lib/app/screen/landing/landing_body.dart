@@ -11,8 +11,8 @@ import 'landing_footer.dart';
 
 class LandingBody extends StatefulWidget {
   const LandingBody({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<LandingBody> createState() => _LandingBodyState();
